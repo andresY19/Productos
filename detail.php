@@ -218,12 +218,12 @@ $mysqli->close();
                         <h4>
                             Suscríbete
                         </h4>
-                        <form action="#">
-                            <input type="text" placeholder="Enter email" />
-                            <button type="submit">
-                                Suscríbete
-                            </button>
-                        </form>
+                        <form name="frmSusbcribe" method="post" action="subscribe.php">
+              <input type="text" placeholder="Enter email" name="txtSEmail" id="txtSEmail" />
+              <button type="submit">
+                Suscríbete
+              </button>
+            </form>
                     </div>
                 </div>
             </div>
