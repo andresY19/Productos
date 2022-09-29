@@ -423,24 +423,21 @@ $mysqli->close();
       <div class="row">
         <div class="col-md-6 col-lg-5 ">
           <div class="img-box">
-            <img src="images/about-img.png" alt="">
+            <img src="images/Carrito.png" alt="">
           </div>
         </div>
         <div class="col-md-6 col-lg-7">
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                About Us
+                Sobre Nosotros
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+            Somos una empresa familiar regional enfocada en el mantenimiento, mejoramiento y restauración de cualquier tipo de vehículo, contamos con productos certificados y de la mejor calidad y tenemos años trabajando en pro de este objetivo siempre buscando el bienestar de nuestros clientes, siendo entonces una de las mejores opciones cuando se trata de vehículos automotrices
             </p>
-            <a href="">
-              Read More
+            <a href="about.html">
+              Lear Mas
             </a>
           </div>
         </div>
@@ -456,11 +453,8 @@ $mysqli->close();
     <div class="container">
       <div class="heading_container">
         <h2>
-          Features Of Our Watches
+          Características de Nuestros Productos
         </h2>
-        <p>
-          Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
       </div>
       <div class="row">
         <div class="col-sm-6 col-lg-3">
@@ -470,17 +464,11 @@ $mysqli->close();
             </div>
             <div class="detail-box">
               <h5>
-                Fitness Tracking
+                Alta calidad
               </h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                Nuestros productos son hechos con los mejores materiales
               </p>
-              <a href="">
-                <span>
-                  Read More
-                </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-              </a>
             </div>
           </div>
         </div>
@@ -491,17 +479,11 @@ $mysqli->close();
             </div>
             <div class="detail-box">
               <h5>
-                Alerts & Notifications
+                Certificación
               </h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                Una de las pocas empresas que cuenta con los respectivos certificados
               </p>
-              <a href="">
-                <span>
-                  Read More
-                </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-              </a>
             </div>
           </div>
         </div>
@@ -512,17 +494,11 @@ $mysqli->close();
             </div>
             <div class="detail-box">
               <h5>
-                Messages
+                Económico
               </h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                Tenemos los mejores precio del mercado, adaptables a cualquier tipo de bolsillo
               </p>
-              <a href="">
-                <span>
-                  Read More
-                </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-              </a>
             </div>
           </div>
         </div>
@@ -533,29 +509,17 @@ $mysqli->close();
             </div>
             <div class="detail-box">
               <h5>
-                Bluetooth
+                Ecológico
               </h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                Todos nuestros productos tienen el objetivo de cuidar el medio ambiente
               </p>
-              <a href="">
-                <span>
-                  Read More
-                </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-              </a>
             </div>
           </div>
         </div>
       </div>
-      <div class="btn-box">
-        <a href="">
-          View More
-        </a>
-      </div>
     </div>
   </section>
-
   <!-- end feature section -->
 
   <!-- contact section -->
@@ -567,25 +531,25 @@ $mysqli->close();
           <div class="form_container">
             <div class="heading_container">
               <h2>
-                Contact Us
+                Contactanos
               </h2>
             </div>
             <form action="">
               <div>
-                <input type="text" placeholder="Full Name " />
+                <input type="text" placeholder="Nombre Completo " />
               </div>
               <div>
                 <input type="email" placeholder="Email" />
               </div>
               <div>
-                <input type="text" placeholder="Phone number" />
+                <input type="text" placeholder="Numero de Telefono" />
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="text" class="message-box" placeholder="Mensaje" />
               </div>
               <div class="d-flex ">
                 <button>
-                  SEND
+                  Enviar
                 </button>
               </div>
             </form>
@@ -593,7 +557,7 @@ $mysqli->close();
         </div>
         <div class="col-md-6">
           <div class="img-box">
-            <img src="images/contact-img.jpg" alt="">
+            <img src="images/Telefono.png" alt="">
           </div>
         </div>
       </div>
@@ -607,7 +571,7 @@ $mysqli->close();
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
-          Testimonial
+          Comentarios
         </h2>
       </div>
       <div class="carousel-wrap ">
