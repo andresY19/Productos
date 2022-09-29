@@ -651,10 +651,10 @@ $mysqli->close();
               Reach at..
             </h4>
             <div class="contact_link_box">
-              <a href="">
+              <a href="https://goo.gl/maps/dq7eU652qj2VhFdc7" target="_blank">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  Ubicacion
                 </span>
               </a>
               <a href="">
@@ -689,7 +689,7 @@ $mysqli->close();
       <div class="footer-info">
         <p>
           &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a>
+          <a href="https://html.design/">Samuel Builes Castrillon</a>
         </p>
       </div>
     </div>
