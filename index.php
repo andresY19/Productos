@@ -46,7 +46,7 @@ $mysqli->close();
   <meta name="author" content="" />
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
-  <title>Samuel Builes Ventas</title>
+  <title>Car Lujos Samuel</title>
 
 
   <!-- bootstrap core css -->
