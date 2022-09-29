@@ -28,6 +28,9 @@ if ($mysqli->connect_error) {
 // SQL query to select data from database
 $sql = " SELECT * FROM testimonial ORDER BY ID ASC ";
 $result = $mysqli->query($sql);
+
+$sql2 = " SELECT b.nombre as featured, a.nombre, a.precio, a.foto FROM productos.productos a inner join productos.tipoproductos b on a.IdTipoProducto = b.IdTipoProducto order by a.FechaCreacion asc limit 8; ";
+$resultProducts = $mysqli->query($sql2);
 $mysqli->close();
 ?>
 
@@ -226,189 +229,46 @@ $mysqli->close();
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
-          Latest Watches
+          Ultimas Referencias
         </h2>
       </div>
       <div class="row">
-        <div class="col-md-6 ">
+        <?php
+          // LOOP TILL END OF DATA
+          while ($rows = $resultProducts->fetch_assoc()) {
+          ?>
+            <div class="col-sm-6 col-xl-3">
           <div class="box">
             <a href="">
               <div class="img-box">
-                <img src="images/w1.png" alt="">
+                <img src="images/<?php echo $rows['foto']; ?>" alt="">
               </div>
               <div class="detail-box">
                 <h6>
-                  Smartwatch
+                <?php echo $rows['nombre']; ?>
                 </h6>
                 <h6>
-                  Price:
+                  Precio:
                   <span>
-                    $300
+                    $<?php echo $rows['precio']; ?>
                   </span>
                 </h6>
               </div>
               <div class="new">
                 <span>
-                  Featured
+                <?php echo $rows['featured']; ?>
                 </span>
               </div>
             </a>
           </div>
         </div>
-        <div class="col-sm-6 col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w2.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $125
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w3.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $110
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w4.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $145
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w5.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $195
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6  col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w6.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $170
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w1.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $230
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
+          <?php
+          }
+          ?>
       </div>
       <div class="btn-box">
-        <a href="">
-          View All
+        <a href="watches.html">
+          Ver todo
         </a>
       </div>
     </div>
