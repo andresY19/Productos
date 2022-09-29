@@ -267,7 +267,7 @@ $mysqli->close();
           ?>
       </div>
       <div class="btn-box">
-        <a href="watches.html">
+        <a href="accesories.html">
           Ver todo
         </a>
       </div>
