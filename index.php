@@ -484,11 +484,8 @@ $mysqli->close();
         <div class="col-md-6 col-lg-3 footer-col">
           <div class="footer_detail">
             <h4>
-              About
+              Comunicate
             </h4>
-            <p>
-              Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
-            </p>
             <div class="footer_social">
               <a href="">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -508,7 +505,7 @@ $mysqli->close();
         <div class="col-md-6 col-lg-3 footer-col">
           <div class="footer_contact">
             <h4>
-              Reach at..
+              Contactanos
             </h4>
             <div class="contact_link_box">
               <a href="https://goo.gl/maps/dq7eU652qj2VhFdc7" target="_blank">
