@@ -29,7 +29,7 @@ if ($mysqli->connect_error) {
 $sql = " SELECT * FROM testimonial ORDER BY ID ASC ";
 $result = $mysqli->query($sql);
 
-$sql2 = " SELECT b.nombre as featured, a.nombre, a.precio, a.foto FROM productos.productos a inner join productos.tipoproductos b on a.IdTipoProducto = b.IdTipoProducto order by a.FechaCreacion asc limit 8; ";
+$sql2 = " SELECT a.IdProducto, b.nombre as featured, a.nombre, a.precio, a.foto FROM productos.productos a inner join productos.tipoproductos b on a.IdTipoProducto = b.IdTipoProducto order by a.FechaCreacion asc limit 8; ";
 $resultProducts = $mysqli->query($sql2);
 $mysqli->close();
 ?>
@@ -101,10 +101,10 @@ $mysqli->close();
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="watches.html"> Tienda </a>
+                <a class="nav-link" href="accesories.php"> Tienda </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html"> Acerca de Nosotros </a>
@@ -113,7 +113,7 @@ $mysqli->close();
                 <a class="nav-link" href="contact.html">Contactanos</a>
               </li>
             </ul>
-            <div class="user_option-box">
+            <!-- <div class="user_option-box">
               <a href="">
                 <i class="fa fa-user" aria-hidden="true"></i>
               </a>
@@ -123,7 +123,7 @@ $mysqli->close();
               <a href="">
                 <i class="fa fa-search" aria-hidden="true"></i>
               </a>
-            </div>
+            </div> -->
           </div>
         </nav>
       </div>
@@ -165,10 +165,10 @@ $mysqli->close();
                 <div class="col-md-6">
                   <div class="detail-box">
                     <h1>
-                    Personaliza tu vehiculo
+                      Personaliza tu vehiculo
                     </h1>
                     <p>
-                    Haz la experiencia de conducir la mejor experiencia de tu vida.
+                      Haz la experiencia de conducir la mejor experiencia de tu vida.
                     </p>
                     <div class="btn-box">
                       <a href="contact.html" class="btn1">
@@ -191,10 +191,10 @@ $mysqli->close();
                 <div class="col-md-6">
                   <div class="detail-box">
                     <h1>
-                    Convierte tu vehiculo en un auto de lujo.
+                      Convierte tu vehiculo en un auto de lujo.
                     </h1>
                     <p>
-                    Accesorios interiores y exteriodes que dan vida a tu vehiculo.
+                      Accesorios interiores y exteriodes que dan vida a tu vehiculo.
                     </p>
                     <div class="btn-box">
                       <a href="contact.html" class="btn1">
@@ -234,37 +234,64 @@ $mysqli->close();
       </div>
       <div class="row">
         <?php
-          // LOOP TILL END OF DATA
-          while ($rows = $resultProducts->fetch_assoc()) {
-          ?>
-            <div class="col-sm-6 col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/<?php echo $rows['foto']; ?>" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                <?php echo $rows['nombre']; ?>
-                </h6>
-                <h6>
-                  Precio:
-                  <span>
-                    $<?php echo $rows['precio']; ?>
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                <?php echo $rows['featured']; ?>
-                </span>
-              </div>
-            </a>
+        // LOOP TILL END OF DATA
+        while ($rows = $resultProducts->fetch_assoc()) {
+        ?>
+          <div class="col-sm-6 col-xl-3">
+            <div class="box">
+              <a href="detail.php?param=<?php echo $rows['IdProducto']; ?>">
+                <div class="img-box">
+                  <img src="images/<?php echo $rows['foto']; ?>" alt="">
+                </div>
+                <div class="detail-box">
+                  <h6>
+                    <?php echo $rows['nombre']; ?>
+                  </h6>
+                  <h6>
+                    Precio:
+                    <span>
+                      $<?php echo $rows['precio']; ?>
+                    </span>
+                  </h6>
+                </div>
+                <?php
+                // LOOP TILL END OF DATA
+                if ($rows['featured'] == 'Destacado') {
+
+
+                ?>
+                  <div class="feature">
+                    <span>
+                      <?php echo $rows['featured']; ?>
+                    </span>
+                  </div>
+                <?php
+                } elseif ($rows['featured'] == 'Sin Stock') {
+                ?>
+
+                  <div class="empty">
+                    <span>
+                      <?php echo $rows['featured']; ?>
+                    </span>
+                  </div>
+                <?php
+                } else {
+                ?>
+                  <div class="new">
+                    <span>
+                      <?php echo $rows['featured']; ?>
+                    </span>
+                  </div>
+
+                <?php
+                }
+                ?>
+              </a>
+            </div>
           </div>
-        </div>
-          <?php
-          }
-          ?>
+        <?php
+        }
+        ?>
       </div>
       <div class="btn-box">
         <a href="accesories.html">
@@ -294,7 +321,7 @@ $mysqli->close();
               </h2>
             </div>
             <p>
-            Somos una empresa familiar regional enfocada en el mantenimiento, mejoramiento y restauración de cualquier tipo de vehículo, contamos con productos certificados y de la mejor calidad y tenemos años trabajando en pro de este objetivo siempre buscando el bienestar de nuestros clientes, siendo entonces una de las mejores opciones cuando se trata de vehículos automotrices
+              Somos una empresa familiar regional enfocada en el mantenimiento, mejoramiento y restauración de cualquier tipo de vehículo, contamos con productos certificados y de la mejor calidad y tenemos años trabajando en pro de este objetivo siempre buscando el bienestar de nuestros clientes, siendo entonces una de las mejores opciones cuando se trata de vehículos automotrices
             </p>
             <a href="about.html">
               Lear Mas
@@ -523,7 +550,7 @@ $mysqli->close();
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  
+
                 </span>
               </a>
             </div>
@@ -532,12 +559,12 @@ $mysqli->close();
         <div class="col-md-6 col-lg-3 footer-col">
           <div class="footer_contact">
             <h4>
-            Suscríbete
-            </h4>
-            <form action="#">
-              <input type="text" placeholder="Enter email" />
-              <button type="submit">
               Suscríbete
+            </h4>
+            <form name="frmSusbcribe" method="post" action="subscribe.php">
+              <input type="text" placeholder="Enter email" name="txtSEmail" id="txtSEmail" />
+              <button type="submit">
+                Suscríbete
               </button>
             </form>
           </div>
