@@ -660,13 +660,13 @@ $mysqli->close();
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Call +3053032125
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  demo@gmail.com
+                  
                 </span>
               </a>
             </div>
@@ -675,21 +675,14 @@ $mysqli->close();
         <div class="col-md-6 col-lg-3 footer-col">
           <div class="footer_contact">
             <h4>
-              Subscribe
+            Suscríbete
             </h4>
             <form action="#">
               <input type="text" placeholder="Enter email" />
               <button type="submit">
-                Subscribe
+              Suscríbete
               </button>
             </form>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 footer-col">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap"></div>
-            </div>
           </div>
         </div>
       </div>
@@ -715,9 +708,6 @@ $mysqli->close();
   </script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-  <!-- End Google Map -->
 
 </body>
 
