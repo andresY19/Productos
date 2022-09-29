@@ -620,7 +620,7 @@ $mysqli->close();
             <div class="item">
               <div class="box">
                 <div class="img-box">
-                  <img src="images/c1.jpg" alt="">
+                  <img src="images/<?php echo $rows['Foto']; ?>" alt="">
                 </div>
                 <div class="detail-box">
                   <div class="client_info">
